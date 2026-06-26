@@ -9,6 +9,8 @@
     "cf:build": "opennextjs-cloudflare build",
     "cf:preview": "opennextjs-cloudflare build && wrangler dev",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "static:build": "node scripts/build-static-site.mjs",
+    "static:deploy": "pnpm run static:build && wrangler pages deploy dist-static --project-name o78-for-web --branch main",
     "lint": "eslint .",
     "start": "next start"
   },
